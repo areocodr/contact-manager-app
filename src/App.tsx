@@ -3,6 +3,7 @@ import ContactForm from "./components/ContactForm";
 import ContactList from "./components/ContactList";
 import Header from "./components/Header";
 import { Contact, contactsReducer, State } from "./reducer/contactsReducer";
+import EditModal from "./components/EditModal";
 
 const initialState: State = {
   contacts: [],
