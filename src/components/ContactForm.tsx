@@ -38,8 +38,23 @@ const ContactForm: FC<ContactFormProps> = ({
           ...contact,
         },
       });
+      setContact({
+        firstName: "",
+        lastName: "",
+        phone: "",
+      });
     } else {
       // dispatch edit contact action
+      dispatch({
+        type: "UPDATE_CONTACT",
+        payload: {
+          id: dataToEdit.id,
+          updates: {
+            id: Date.now(),
+            ...contact,
+          },
+        },
+      });
       toggleModal();
     }
   };
