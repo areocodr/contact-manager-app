@@ -30,7 +30,6 @@ const ContactForm: FC<ContactFormProps> = ({
   };
   const handleOnSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
     //Form validation
     const { firstName, lastName, phone } = contact;
     if (
@@ -58,6 +57,7 @@ const ContactForm: FC<ContactFormProps> = ({
         lastName: "",
         phone: "",
       });
+      setErrorMsg("");
     } else {
       // dispatch edit contact action
       dispatch({
